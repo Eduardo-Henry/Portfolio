@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Minimal Portfolio (React + Vite + TypeScript)
 
 A simple, minimalist portfolio in English built with React, Vite, and TypeScript following Atomic Design (atoms, molecules, organisms).
@@ -44,3 +45,6 @@ npm run preview
 - Hero photo: add hero.jpg and it will appear on the hero section.
 - Project thumbnails: add files and reference their URLs in your project links (or leave as text-only cards).
 - You can change classes .avatar and layout in src/styles.css.
+=======
+# Portfolio-EduardoCarvalho
+>>>>>>> d92cf5eefe5b3a652c7f80b36a3368a5f98415dd
