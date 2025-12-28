@@ -4,6 +4,7 @@ import '../../styles/works.css'
 import KaloBurnImage from '../../assets/KaloBurnUXProject.png'
 import MedicineImage from '../../assets/MedicineUXProject.png'
 import FashionImage from '../../assets/FashionUXProject.png'
+import ImoveProImage from '../../assets/imoveProUXProject.png'
 
 const categories = ['UX Design', 'Social Media', 'Programming', 'All']
 
@@ -49,6 +50,13 @@ const works = [
     tags: ['UX Design', 'Mobile'], 
     imageSrc: FashionImage,
     ctaHref: '#fashion' 
+  },
+  { 
+    title: 'iMovePro', 
+    description: 'Real estate platform UX design', 
+    tags: ['UX Design', 'Web'], 
+    imageSrc: ImoveProImage,
+    ctaHref: '#imovepro' 
   },
 ]
 
