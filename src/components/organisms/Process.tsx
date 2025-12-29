@@ -55,6 +55,7 @@ export default function Process() {
                 </li>
               ))}
             </ul>
+            <a href="#contact" className="cta-button">Let's get in touch</a>
           </div>
         </div>
       </div>

@@ -26,6 +26,25 @@
 .step-icon img { width: 24px; height: 24px; display: block; }
 .steps h4 { margin: 0 0 6px; font-weight: 600; }
 .steps p { margin: 0; }
+.cta-button {
+  display: inline-block;
+  color: var(--text-main);
+  background: transparent;
+  border: 2px solid var(--text-main);
+  padding: 12px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+.cta-button:hover {
+  background: var(--text-main);
+  color: var(--bg-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(232, 232, 232, 0.3);
+}
 
 @media (max-width: 1024px) {
   .process-section { margin-left: 0; width: 100%; padding: 64px clamp(20px, 5vw, 48px); }

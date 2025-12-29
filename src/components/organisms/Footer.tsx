@@ -27,22 +27,21 @@ export default function Footer() {
 
         {/* Right: copyright + contact + pills */}
         <div className="footer-right">
-          <div className="copyright">© 2025 — Copyright</div>
+          <div className="copyright">Eduardo Carvalho© 2025 — Copyright</div>
           <div className="contact-block">
             <div className="contact-lines">
-              <span>+55 (17) 98182-4647</span>
               <span>du.h.c.oliveira17@gmail.com</span>
             </div>
             <div className="footer-pills">
-              <a href="#" className="pill small">
+              <a href="https://www.instagram.com/ocarvalho.dzn/" className="pill small" target="_blank" rel="noopener noreferrer">
                 <img src={iconInstagram} alt="Instagram" className="pill-icon" />
                 Instagram
               </a>
-              <a href="#" className="pill small">
+              <a href="https://www.linkedin.com/in/eduardohenrycarvalho/" className="pill small" target="_blank" rel="noopener noreferrer">
                 <img src={iconLinkedin} alt="LinkedIn" className="pill-icon" />
                 Linkedin
               </a>
-              <a href="#" className="pill small">
+              <a href="https://github.com/Eduardo-Henry" className="pill small" target="_blank" rel="noopener noreferrer">
                 <img src={iconGithub} alt="GitHub" className="pill-icon" />
                 Github
               </a>

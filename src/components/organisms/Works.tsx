@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import WorkCard from '../molecules/WorkCard'
 import '../../styles/works.css'
 import KaloBurnImage from '../../assets/KaloBurnUXProject.png'
@@ -62,6 +62,7 @@ const works = [
 
 export default function Works() {
   const gridRef = useRef<HTMLDivElement>(null)
+  const [activeCategory, setActiveCategory] = useState('UX Design')
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -97,7 +98,16 @@ export default function Works() {
         <p className="muted">Selected Works</p>
         <div className="category-nav">
           {categories.map((c) => (
-            <a key={c} href="#" className="pill small">{c}</a>
+            <button
+              key={c}
+              onClick={(e) => {
+                e.preventDefault()
+                setActiveCategory(c)
+              }}
+              className={`pill small ${activeCategory === c ? 'active' : ''}`}
+            >
+              {c}
+            </button>
           ))}
         </div>
       </div>

@@ -4,6 +4,8 @@ import Logo from '../../assets/LogoEduardoCarvalho.svg'
 import LogoInverted from '../../assets/LogoEduardoCarvalhoInverted.svg'
 import IconMenuWhite from '../../assets/iconMenuWhite.svg'
 import IconMenuBlack from '../../assets/iconMenuBlack.svg'
+import IconCloseMenuBlack from '../../assets/iconCloseMenuBlack.svg'
+import IconCloseMenuWhite from '../../assets/iconCloseMenuWhite.svg'
 import PDF from '../../assets/Curriculo-EduardoCarvalho.pdf'
 import '../../styles/header.css'
 
@@ -35,18 +37,37 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const getMenuIcon = () => {
+    if (!menuOpen) {
+      return isLightMode ? IconMenuWhite : IconMenuBlack
+    }
+    
+    // Menu está aberto - verificar qual icon de close usar
+    const processSection = document.getElementById('process')
+    if (processSection) {
+      const processRect = processSection.getBoundingClientRect()
+      const isOverProcess = processRect.top <= 50 && processRect.bottom > 50
+      if (isOverProcess) {
+        return IconCloseMenuWhite
+      }
+    }
+    
+    // Por padrão (antes de process), usar IconCloseMenuBlack
+    return IconCloseMenuBlack
+  }
+
   return (
     <header className={`header ${isLightMode ? 'light-mode' : ''}`}>
       <a href="#home" className="brand">
         <img src={isLightMode ? Logo : LogoInverted} alt="Logo" className="brand-logo" />
       </a>
       <button 
-        className="menu-toggle" 
+        className={`menu-toggle ${menuOpen ? 'open' : ''}`}
         onClick={() => setMenuOpen(!menuOpen)}
         aria-label="Toggle menu"
       >
         <img 
-          src={isLightMode ? IconMenuWhite : IconMenuBlack} 
+          src={getMenuIcon()}
           alt="Menu" 
           className="menu-icon" 
         />

@@ -1,6 +1,28 @@
 /* Carousel Section */
-.carousel-section { overflow: hidden; padding: 32px 0; background: var(--bg-dark); }
-.carousel-wrapper { width: 100%; overflow: hidden; }
+.carousel-section { overflow: hidden; padding: 32px 0; background: var(--bg-dark); position: relative; }
+.carousel-section::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  background: linear-gradient(to right, var(--bg-dark), transparent);
+  z-index: 2;
+  pointer-events: none;
+}
+.carousel-section::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  background: linear-gradient(to left, var(--bg-dark), transparent);
+  z-index: 2;
+  pointer-events: none;
+}
+.carousel-wrapper { width: 100vw; margin-left: calc(50% - 50vw); overflow: hidden; }
 .carousel-track {
   display: flex;
   animation: scroll-infinite 60s linear infinite;

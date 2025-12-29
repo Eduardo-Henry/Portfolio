@@ -28,6 +28,91 @@
 .intro-text { max-width: 520px; }
 .reveal-text { font-size: 1rem; line-height: 1.7; max-width: 520px; }
 
+/* Mobile Carousel for Design Process */
+.about-carousel-wrapper { display: none; }
+
+@media (max-width: 560px) {
+  .about-carousel-wrapper { 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(232, 232, 232, 0.1);
+  }
+  
+  .carousel-title {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .carousel-title .pill {
+    width: fit-content;
+  }
+  
+  .carousel-title .subhead {
+    margin: 0;
+  }
+  
+  .about-carousel {
+    margin: 12px 0;
+  }
+  
+  .carousel-items {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-step {
+    display: none;
+    padding: 16px 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .carousel-step.active {
+    display: block;
+    opacity: 1;
+  }
+  
+  .carousel-step h4 {
+    font-size: 1rem;
+    margin: 0 0 8px;
+    font-weight: 600;
+  }
+  
+  .carousel-step p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  .carousel-indicators {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    margin-top: 16px;
+  }
+  
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(232, 232, 232, 0.3);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+  }
+  
+  .dot.active {
+    background: var(--text-main);
+    width: 24px;
+    border-radius: 999px;
+  }
+}
+
 @media (max-width: 1024px) {
   .about-grid { grid-template-columns: 1fr 1fr; gap: 24px; padding: 40px clamp(20px, 5vw, 48px); }
   .about-image-anchor { width: clamp(280px, 45vw, 500px); }

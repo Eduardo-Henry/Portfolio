@@ -2,11 +2,11 @@ import React from 'react'
 import '../../styles/carousel.css'
 
 const phrases = [
+  'Let me transform your ideas into reality',
+  'Turn vision into design excellence',
   'Discover the power of techniques that transform ideas into reality.',
   'Design systems built for accessibility and clarity.',
   'Performance meets beauty in every interface.',
-  'Crafting experiences that users love.',
-  'Minimal complexity, maximum impact.',
 ]
 
 export default function Carousel() {
